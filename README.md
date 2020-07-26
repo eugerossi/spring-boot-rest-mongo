@@ -2,8 +2,6 @@
 ## Mongo Repositories
  
 **Supported keywords for query methods**
-https://www.baeldung.com/queries-in-spring-data-mongodb
-https://docs.spring.io/spring-data/mongodb/docs/1.2.0.RELEASE/reference/html/mongo.repositories.html
 
 Keyword | Sample | Logical result
 --- | --- | ---
@@ -23,11 +21,13 @@ IsTrue, True | findByActiveIsTrue() | {"active" : true}
 IsFalse, False | findByActiveIsFalse() | {"active" : false}
 Exists | findByLocationExists(boolean exists) |{"location" : {"$exists" : exists }}
 
+Further information at:
+* https://www.baeldung.com/queries-in-spring-data-mongodb
+* https://docs.spring.io/spring-data/mongodb/docs/1.2.0.RELEASE/reference/html/mongo.repositories.html
+
+
 
 ## REST Repositories
- 
-**Supported keywords for query methods**
-https://spring.io/guides/gs/accessing-data-rest/
 
 Annotation _@RepositoryRestResource_ will define the exposed path
 ```
@@ -40,5 +40,10 @@ In case we need to call a method from repository, we'll use /search and the meth
 public List<Employee> findByLastNameLike(@Param("lastName") String lastName);
 ...
 ```
+ 
+Further information at:
+* https://spring.io/guides/gs/accessing-data-rest/
 
-http://localhost:8082/swagger-ui.html
+**Swagger (not working :( )**
+
+http://localhost:8083/swagger-ui.html 
