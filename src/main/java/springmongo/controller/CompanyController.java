@@ -1,6 +1,7 @@
 package springmongo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,6 +19,7 @@ public class CompanyController {
     @Autowired
     private CompanyService companyService;
 
+    @CrossOrigin
     @GetMapping("/")
     public Company getECompanyParam(@RequestParam String id) {
         System.out.println("WS Called with id " + id);

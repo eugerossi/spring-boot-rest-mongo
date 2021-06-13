@@ -12,6 +12,6 @@ import java.util.List;
 public interface EmployeeRESTRepository extends PagingAndSortingRepository<Employee, String> {
 
     // Access URL: http://localhost:8083/employeeRepo/search/findByLastNameLike?lastName=criteria
-    // It will try to match the value from bo property
+    // It will try to match the value from Object property
     public List<Employee> findByLastNameLike(@Param("lastName") String lastName);
 }
